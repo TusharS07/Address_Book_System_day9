@@ -21,13 +21,12 @@ public class AddressBookSystem {
                     break;
 
                 case 2:
-                    //22System.out.println(" ");
-                    //System.out.println("            " + " First Name " + " Last Name " + " Address " + " City " + " State " + " Zip Code " + " Conatct Number " + " E-mail ID ");
                     contact.display();
                     break;
 
                 default:
                     System.out.println("You have Entered Wrong Choice ");
+                    System.out.println();
             }
         }
 
