@@ -77,31 +77,38 @@ public class Contact {
 
                 switch (choice) {
                     case 1:
-                        System.out.print("Enter Address: ");
+                        System.out.print("Enter New Address: ");
                         String newAddress = sc.next();
+                        data.address = newAddress;
 
-                        System.out.print("Enter City Name: ");
+                        System.out.print("Enter New City Name: ");
                         String newCity = sc.next();
+                        data.cityName = newCity;
 
-                        System.out.print("Enter State: ");
+                        System.out.print("Enter New State: ");
                         String newState = sc.next();
+                        data.stateName = newState;
 
-                        System.out.print("Enter postal code(Zip Code): ");
+                        System.out.print("Enter New postal code(Zip Code): ");
                         int zip = sc.nextInt();
+                        data.zipCode = zip;
                         break;
 
                     case 2:
-                        System.out.print("Enter Contact Number: ");
+                        System.out.print("Enter New Contact Number: ");
                         long newNumber = sc.nextLong();
+                        data.phoneNumber = newNumber;
                         break;
 
                     case 3:
-                        System.out.print("Enter Email ID: ");
+                        System.out.print("Enter New Email ID: ");
                         String newEmail = sc.next();
+                        data.emailID = newEmail;
                         break;
 
 
                 }
+                System.out.println("Updated Successfully...");
             }
             else
                 System.out.println("No record Found ");
@@ -117,7 +124,7 @@ public class Contact {
         }
 
         else {
-            System.out.print("ENter First Name to delete Contact from addressBook: ");
+            System.out.print("Enter First Name to delete Contact from addressBook: ");
             String first_name =  sc.next();
             for (int i = 0; i < userData.size(); i++) {
                 UserData data = userData.get(i);

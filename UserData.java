@@ -26,7 +26,7 @@ public class UserData {
         this.zipCode = zipCode;
     }
 
-    /*public void setFirstName() {
+    public void setFirstName() {
         this.firstName = firstName;
     }
 
@@ -34,38 +34,36 @@ public class UserData {
         this.lastName = lastName;
     }
 
-    public
-
-     */
-
-
-    /*public String toString() {
-        return "Address Book ::  " +
-                " " + firstName +
-                " " + lastName +
-                " " + phoneNumber +
-                " " + emailID +
-                " " + address +
-                " " + cityName +
-                " " + stateName +
-                " " + zipCode + "\n";
-
-
-
+    public void setAddress() {
+        this.address = address;
     }
 
-     */
+    public void setCityName() {
+        this.cityName = cityName;
+    }
+
+    public void setStateName() {
+        this.stateName = stateName;
+    }
+
+    public void setZipCode() {
+        this.zipCode = zipCode;
+    }
+
+    public void setPhoneNumber() {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setEmailID() {
+        this.emailID = emailID;
+    }
+
+
 
     public String toString() {
         System.out.println();
         return "First Name: " + firstName + " \nLast Name: " + lastName + " \nContact number: "+ phoneNumber + " \nEmail ID: " + emailID + " \nAddress: " + address + " \nCity Name: " + cityName + " \nState Name: " + stateName + " \nPostal Code(Zip Code): " + zipCode + "\n";
 
     }
-
-    public void print() {
-        System.out.println( "First Name: " + firstName + " \nLast Name: " + lastName + " \nContact number: "+ phoneNumber + " \nEmail ID: " + emailID + " \nAddress: " + address + " \nCity Name: " + cityName + " \nState Name: " + stateName + " \nPostal Code(Zip Code): " + zipCode + "\n");
-    }
-
-
 
 }
