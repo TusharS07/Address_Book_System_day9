@@ -26,37 +26,39 @@ public class UserData {
         this.zipCode = zipCode;
     }
 
-    public void setFirstName() {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public void setLastName() {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public void setAddress() {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public void setCityName() {
+    public void setCityName(String cityName) {
         this.cityName = cityName;
     }
 
-    public void setStateName() {
+    public void setStateName(String stateName) {
         this.stateName = stateName;
     }
 
-    public void setZipCode() {
+    public void setZipCode(int zipCode) {
         this.zipCode = zipCode;
     }
 
-    public void setPhoneNumber() {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setEmailID() {
+    public void setEmailID(String emailID) {
         this.emailID = emailID;
     }
+
+
 
 
 

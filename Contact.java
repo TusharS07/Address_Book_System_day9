@@ -52,7 +52,6 @@ public class Contact {
             System.out.println();
         } else {
             for (int i = 0; i < userData.size(); i++) {
-                UserData data = (UserData) userData.get(i);
                 System.out.println(userData.get(i));
                 System.out.println(" ");
             }
@@ -72,38 +71,42 @@ public class Contact {
             UserData data = userData.get(i);
 
             if (first_name.equals(data.firstName) && last_name.equals(data.lastName)) {
-                System.out.println("Enter Choice to Update\nEnter 1 for Update Address\n Enter 2 for contact Number \n " + "Enter 3 for Email adderss ");
+                System.out.println("""
+                        Enter Choice to Update\s
+                         Enter 1 for Update Address
+                         Enter 2 for contact Number\s
+                         Enter 3 for Email adderss\s""");
                 int choice =  sc.nextInt();
 
                 switch (choice) {
                     case 1:
                         System.out.print("Enter New Address: ");
-                        String newAddress = sc.next();
-                        data.address = newAddress;
+                        String address = sc.next();
+                        data.setAddress(address);
 
                         System.out.print("Enter New City Name: ");
-                        String newCity = sc.next();
-                        data.cityName = newCity;
+                        String city = sc.next();
+                        data.setCityName(city);
 
                         System.out.print("Enter New State: ");
-                        String newState = sc.next();
-                        data.stateName = newState;
+                        String state = sc.next();
+                        data.setStateName(state);
 
                         System.out.print("Enter New postal code(Zip Code): ");
-                        int zip = sc.nextInt();
-                        data.zipCode = zip;
+                        int zipCode = sc.nextInt();
+                        data.setZipCode(zipCode);
                         break;
 
                     case 2:
                         System.out.print("Enter New Contact Number: ");
-                        long newNumber = sc.nextLong();
-                        data.phoneNumber = newNumber;
+                        long phoneNumber = sc.nextLong();
+                        data.setPhoneNumber(phoneNumber);
                         break;
 
                     case 3:
                         System.out.print("Enter New Email ID: ");
-                        String newEmail = sc.next();
-                        data.emailID = newEmail;
+                        String emailID = sc.next();
+                        data.setEmailID(emailID);
                         break;
 
 
@@ -124,15 +127,20 @@ public class Contact {
         }
 
         else {
-            System.out.print("Enter First Name to delete Contact from addressBook: ");
+            System.out.print("Enter First Name to delete Contact from Address Book: ");
             String first_name =  sc.next();
             for (int i = 0; i < userData.size(); i++) {
                 UserData data = userData.get(i);
                 if (first_name.equals(data.firstName)) {
                     userData.remove(i);
-                    System.out.println("Contact Delete SuccessFully...");
+                    System.out.println();
+                    System.out.println("Contact Deleted SuccessFully...");
+
+                } else {
+                    System.out.println("User does not exist ");
                 }
             }
         }
+        System.out.println();
     }
 }
